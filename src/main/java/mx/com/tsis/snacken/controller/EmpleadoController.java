@@ -78,7 +78,7 @@ public class EmpleadoController {
 	}
 
 	/**
-	 * GET /empleados/:id -> get the "id" empleado.
+	 * GET /empleados/{id} -> get the "id" empleado.
 	 */
 	@RequestMapping(value = "/empleado/{id}", method = RequestMethod.GET, produces = MediaType.APPLICATION_JSON_VALUE)
 	public ResponseEntity<Empleado> getEmpleado(@PathVariable Long id) {
