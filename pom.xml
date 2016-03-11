@@ -39,7 +39,33 @@
 		<hibernate.dialect>org.hibernate.dialect.MySQLDialect</hibernate.dialect>
 	</properties>
 
+
+
 	<profiles>
+		<profile>
+			<id>debian</id>
+			<activation>
+				<activeByDefault>false</activeByDefault>
+			</activation>
+			<properties>
+				<db.driver>com.mysql.jdbc.Driver</db.driver>
+				<db.url>jdbc:mysql://192.168.248.130:3306/snacken</db.url>
+				<db.username>snacken</db.username>
+				<db.password>snacken2016</db.password>
+			</properties>
+		</profile>
+		<profile>
+			<id>local</id>
+			<activation>
+				<activeByDefault>true</activeByDefault>
+			</activation>
+			<properties>
+				<db.driver>com.mysql.jdbc.Driver</db.driver>
+				<db.url>jdbc:mysql://192.168.248.130:3306/snacken</db.url>
+				<db.username>snacken</db.username>
+				<db.password>snacken2016</db.password>
+			</properties>
+		</profile>
 		<profile>
 			<id>remoto</id>
 			<activation>
