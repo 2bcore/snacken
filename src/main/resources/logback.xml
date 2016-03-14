@@ -30,7 +30,7 @@
     </encoder>
   </appender>
 
-    <logger name="mx.com.tsis.snacken" level="@logback.loglevel@"/>
+    <logger name="mx.com.twobcore.snacken" level="@logback.loglevel@"/>
 
     <logger name="javax.activation" level="WARN"/>
     <logger name="javax.mail" level="WARN"/>

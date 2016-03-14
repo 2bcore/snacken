@@ -1,4 +1,4 @@
-package mx.com.tsis.snacken.util;
+package mx.com.twobcore.snacken.util;
 
 import org.springframework.http.HttpHeaders;
 

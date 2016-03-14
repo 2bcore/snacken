@@ -1,4 +1,4 @@
-package mx.com.tsis.snacken.config;
+package mx.com.twobcore.snacken.config;
 
 import com.zaxxer.hikari.HikariConfig;
 import com.zaxxer.hikari.HikariDataSource;
@@ -29,13 +29,13 @@ import java.util.Properties;
  */
 @Configuration
 @EnableJpaRepositories(basePackages = {
-        "mx.com.tsis.snacken"
+        "mx.com.twobcore.snacken"
 })
 @EnableTransactionManagement
 @PropertySource("classpath:application.properties")
-class PersistenceContext {
+class SnackenPersistenceContext {
     private static final String[] ENTITY_PACKAGES = {
-            "mx.com.tsis.snacken.model"
+            "mx.com.twobcore.snacken.model"
     };
 
     private static final String PROPERTY_NAME_DB_DRIVER_CLASS = "db.driver";

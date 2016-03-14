@@ -1,8 +1,8 @@
-package mx.com.tsis.snacken.respository;
+package mx.com.twobcore.snacken.respository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
-import mx.com.tsis.snacken.model.Empleado;
+import mx.com.twobcore.snacken.model.Empleado;
 
 /**
  * Spring Data JPA repository for the Empleado entity.

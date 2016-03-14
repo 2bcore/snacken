@@ -1,4 +1,4 @@
-package mx.com.tsis.snacken.model;
+package mx.com.twobcore.snacken.model;
 
 import java.io.Serializable;
 import java.math.BigDecimal;

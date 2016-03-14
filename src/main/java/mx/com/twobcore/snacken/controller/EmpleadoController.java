@@ -1,4 +1,4 @@
-package mx.com.tsis.snacken.controller;
+package mx.com.twobcore.snacken.controller;
 
 import java.net.URI;
 import java.net.URISyntaxException;
@@ -17,9 +17,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
-import mx.com.tsis.snacken.model.Empleado;
-import mx.com.tsis.snacken.service.EmpleadoService;
-import mx.com.tsis.snacken.util.HeaderUtil;
+import mx.com.twobcore.snacken.model.Empleado;
+import mx.com.twobcore.snacken.service.EmpleadoService;
+import mx.com.twobcore.snacken.util.HeaderUtil;
 
 /**
  * REST controller for managing Empleado.

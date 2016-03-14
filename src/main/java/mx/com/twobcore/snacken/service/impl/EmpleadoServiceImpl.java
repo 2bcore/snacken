@@ -1,13 +1,13 @@
-package mx.com.tsis.snacken.service.impl;
+package mx.com.twobcore.snacken.service.impl;
 
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import mx.com.tsis.snacken.model.Empleado;
-import mx.com.tsis.snacken.respository.EmpleadoRepository;
-import mx.com.tsis.snacken.service.EmpleadoService;
+import mx.com.twobcore.snacken.model.Empleado;
+import mx.com.twobcore.snacken.respository.EmpleadoRepository;
+import mx.com.twobcore.snacken.service.EmpleadoService;
 
 
 @Service

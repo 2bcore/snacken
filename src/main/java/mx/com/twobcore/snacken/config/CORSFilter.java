@@ -1,4 +1,4 @@
-package mx.com.tsis.snacken.config;
+package mx.com.twobcore.snacken.config;
 
 import java.io.IOException;
 

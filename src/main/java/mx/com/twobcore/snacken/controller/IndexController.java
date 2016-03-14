@@ -1,4 +1,4 @@
-package mx.com.tsis.snacken.controller;
+package mx.com.twobcore.snacken.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;

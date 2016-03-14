@@ -1,14 +1,14 @@
-package mx.com.tsis.snacken.config;
+package mx.com.twobcore.snacken.config;
 
 import javax.servlet.Filter;
 
 import org.springframework.web.servlet.support.AbstractAnnotationConfigDispatcherServletInitializer;
 
-public class RestDemoInitializer extends AbstractAnnotationConfigDispatcherServletInitializer {
+public class SnackenInitializer extends AbstractAnnotationConfigDispatcherServletInitializer {
  
     @Override
     protected Class<?>[] getRootConfigClasses() {
-        return new Class[] { RestDemoConfigurator.class };
+        return new Class[] { SnackenConfigurator.class };
     }
   
     @Override

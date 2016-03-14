@@ -1,4 +1,4 @@
-package mx.com.tsis.snacken.config;
+package mx.com.twobcore.snacken.config;
 
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
@@ -11,11 +11,8 @@ import org.springframework.web.servlet.view.JstlView;
 
 @Configuration
 @EnableWebMvc
-@ComponentScan(basePackages = "mx.com.tsis.snacken")
-//@EnableJpaRepositories("mx.com.tsis.snacken.respository")
-//@EntityScan(basePackages={"mx.com.tsis.snacken.model"})
-//@PropertySource("classpath:application.properties")
-public class RestDemoConfigurator  extends WebMvcConfigurerAdapter{
+@ComponentScan(basePackages = "mx.com.twobcore.snacken")
+public class SnackenConfigurator  extends WebMvcConfigurerAdapter{
 
 	@Override
 	public void configureViewResolvers(ViewResolverRegistry registry) {

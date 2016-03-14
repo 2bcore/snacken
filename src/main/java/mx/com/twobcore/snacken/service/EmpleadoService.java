@@ -1,8 +1,8 @@
-package mx.com.tsis.snacken.service;
+package mx.com.twobcore.snacken.service;
 
 import java.util.List;
 
-import mx.com.tsis.snacken.model.Empleado;
+import mx.com.twobcore.snacken.model.Empleado;
 
 public interface EmpleadoService {
 
