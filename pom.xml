@@ -52,6 +52,8 @@
 				<db.url>jdbc:mysql://192.168.248.130:3306/snacken</db.url>
 				<db.username>snacken</db.username>
 				<db.password>snacken2016</db.password>
+				<rest-host-name>192.168.248.130</rest-host-name>
+				<rest-host-port>8080</rest-host-port>
 			</properties>
 		</profile>
 		<profile>
@@ -64,6 +66,8 @@
 				<db.url>jdbc:mysql://localhost:3306/snacken</db.url>
 				<db.username>snacken</db.username>
 				<db.password>snacken2016</db.password>
+				<rest-host-name>localhost</rest-host-name>
+				<rest-host-port>8080</rest-host-port>
 			</properties>
 		</profile>
 		<profile>
@@ -73,9 +77,11 @@
 			</activation>
 			<properties>
 				<db.driver>com.mysql.jdbc.Driver</db.driver>
-				<db.url>jdbc:mysql://192.168.248.130:3306/snacken</db.url>
+				<db.url>jdbc:mysql://ec2-54-187-28-176.us-west-2.compute.amazonaws.com:3306/snacken</db.url>
 				<db.username>snacken</db.username>
 				<db.password>snacken2016</db.password>
+				<rest-host-name>ec2-54-187-28-176.us-west-2.compute.amazonaws.com</rest-host-name>
+				<rest-host-port>8080</rest-host-port>
 			</properties>
 		</profile>
 	</profiles>
@@ -236,6 +242,15 @@
 					<artifactId>maven-war-plugin</artifactId>
 					<version>2.4</version>
 					<configuration>
+						<webResources>
+							<webResource>
+								<filtering>true</filtering>
+								<directory>src/main/webapp</directory>
+								<includes>									
+									<include>**/js/service/*.js</include>
+								</includes>
+							</webResource>
+						</webResources>
 						<warSourceDirectory>src/main/webapp</warSourceDirectory>
 						<warName>snacken-war</warName>
 						<failOnMissingWebXml>false</failOnMissingWebXml>

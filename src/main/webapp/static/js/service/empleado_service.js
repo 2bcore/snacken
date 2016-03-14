@@ -5,7 +5,7 @@ App.factory('EmpleadoService', ['$http', '$q', function($http, $q){
 	return {
 		
 			fetchAllEmpleados: function() {
-					return $http.get('http://192.168.248.130:8080/snacken/empleado/')
+					return $http.get('http://${rest-host-name}:${rest-host-port}/snacken/empleado/')
 							.then(
 									function(response){
 										return response.data;
@@ -18,7 +18,7 @@ App.factory('EmpleadoService', ['$http', '$q', function($http, $q){
 			},
 		    
 		    createEmpleado: function(empleado){
-					return $http.post('http://192.168.248.130:8080/snacken/empleado/', empleado)
+					return $http.post('http://${rest-host-name}:${rest-host-port}/snacken/empleado/', empleado)
 							.then(
 									function(response){
 										return response.data;
@@ -31,7 +31,7 @@ App.factory('EmpleadoService', ['$http', '$q', function($http, $q){
 		    },
 		    
 		    updateEmpleado: function(empleado, id){
-					return $http.put('http://192.168.248.130:8080/snacken/empleado/'+id, empleado)
+					return $http.put('http://${rest-host-name}:${rest-host-port}/snacken/empleado/'+id, empleado)
 							.then(
 									function(response){
 										return response.data;
@@ -44,7 +44,7 @@ App.factory('EmpleadoService', ['$http', '$q', function($http, $q){
 			},
 		    
 			deleteEmpleado: function(id){
-					return $http.delete('http://192.168.248.130:8080/snacken/empleado/'+id)
+					return $http.delete('http://${rest-host-name}:${rest-host-port}/snacken/empleado/'+id)
 							.then(
 									function(response){
 										return response.data;
