@@ -32,11 +32,6 @@
 		<maven.compiler.target>${java.version}</maven.compiler.target>
 		<logback.loglevel>DEBUG</logback.loglevel>
 
-		<db.driver>com.mysql.jdbc.Driver</db.driver>
-		<db.url>jdbc:mysql://debian:3306/snacken</db.url>
-		<db.username>snacken</db.username>
-		<db.password>snacken2016</db.password>
-		<hibernate.dialect>org.hibernate.dialect.MySQLDialect</hibernate.dialect>
 	</properties>
 
 
@@ -48,10 +43,13 @@
 				<activeByDefault>false</activeByDefault>
 			</activation>
 			<properties>
+				<app-name>snacken</app-name>
+				<db-name>snacken</db-name>
 				<db.driver>com.mysql.jdbc.Driver</db.driver>
-				<db.url>jdbc:mysql://192.168.248.130:3306/snacken</db.url>
+				<db.url>jdbc:mysql://192.168.248.130:3306/${db-name}</db.url>
 				<db.username>snacken</db.username>
 				<db.password>snacken2016</db.password>
+				<hibernate.dialect>org.hibernate.dialect.MySQLDialect</hibernate.dialect>
 				<rest-host-name>192.168.248.130</rest-host-name>
 				<rest-host-port>8080</rest-host-port>
 			</properties>
@@ -62,10 +60,13 @@
 				<activeByDefault>true</activeByDefault>
 			</activation>
 			<properties>
+				<app-name>snacken-war</app-name>
+				<db-name>snacken</db-name>
 				<db.driver>com.mysql.jdbc.Driver</db.driver>
-				<db.url>jdbc:mysql://localhost:3306/snacken</db.url>
+				<db.url>jdbc:mysql://localhost:3306/${db-name}</db.url>
 				<db.username>snacken</db.username>
 				<db.password>snacken2016</db.password>
+				<hibernate.dialect>org.hibernate.dialect.MySQLDialect</hibernate.dialect>
 				<rest-host-name>localhost</rest-host-name>
 				<rest-host-port>8080</rest-host-port>
 			</properties>
@@ -76,10 +77,13 @@
 				<activeByDefault>false</activeByDefault>
 			</activation>
 			<properties>
+				<app-name>snacken</app-name>
+				<db-name>snacken</db-name>
 				<db.driver>com.mysql.jdbc.Driver</db.driver>
-				<db.url>jdbc:mysql://ec2-54-187-28-176.us-west-2.compute.amazonaws.com:3306/snacken</db.url>
+				<db.url>jdbc:mysql://snacken.c5tdvodan43k.us-west-2.rds.amazonaws.com:3306/${db-name}</db.url>
 				<db.username>snacken</db.username>
 				<db.password>snacken2016</db.password>
+				<hibernate.dialect>org.hibernate.dialect.MySQLDialect</hibernate.dialect>
 				<rest-host-name>ec2-54-187-28-176.us-west-2.compute.amazonaws.com</rest-host-name>
 				<rest-host-port>8080</rest-host-port>
 			</properties>
@@ -215,7 +219,7 @@
 
 	</dependencies>
 	<build>
-		<finalName>snacken-war</finalName>
+		<finalName>snacken</finalName>
 
 		<resources>
 			<resource>
@@ -234,7 +238,7 @@
 					<artifactId>heroku-maven-plugin</artifactId>
 					<version>0.4.3</version>
 					<configuration>
-						<appName>snacken-war</appName>
+						<appName>${app-name}</appName>
 					</configuration>
 				</plugin>
 				<plugin>
@@ -246,13 +250,13 @@
 							<webResource>
 								<filtering>true</filtering>
 								<directory>src/main/webapp</directory>
-								<includes>									
+								<includes>
 									<include>**/js/service/*.js</include>
 								</includes>
 							</webResource>
 						</webResources>
 						<warSourceDirectory>src/main/webapp</warSourceDirectory>
-						<warName>snacken-war</warName>
+						<warName>${app-name}</warName>
 						<failOnMissingWebXml>false</failOnMissingWebXml>
 					</configuration>
 				</plugin>

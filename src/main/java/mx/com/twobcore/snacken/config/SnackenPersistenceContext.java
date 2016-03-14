@@ -30,7 +30,7 @@ import java.util.Properties;
 @Configuration
 @EnableJpaRepositories(basePackages = {
         "mx.com.twobcore.snacken"
-})
+})  
 @EnableTransactionManagement
 @PropertySource("classpath:application.properties")
 class SnackenPersistenceContext {
@@ -44,7 +44,7 @@ class SnackenPersistenceContext {
     private static final String PROPERTY_NAME_DB_USER = "db.username";
     private static final String PROPERTY_NAME_HIBERNATE_DIALECT = "hibernate.dialect";
     private static final String PROPERTY_NAME_HIBERNATE_FORMAT_SQL = "hibernate.format_sql";
-    private static final String PROPERTY_NAME_HIBERNATE_HBM2DDL_AUTO = "hibernate.hbm2ddl.auto";
+//    private static final String PROPERTY_NAME_HIBERNATE_HBM2DDL_AUTO = "hibernate.hbm2ddl.auto";
     private static final String PROPERTY_NAME_HIBERNATE_NAMING_STRATEGY = "hibernate.ejb.naming_strategy";
     private static final String PROPERTY_NAME_HIBERNATE_SHOW_SQL = "hibernate.show_sql";
 
@@ -87,7 +87,7 @@ class SnackenPersistenceContext {
 
         //Specifies the action that is invoked to the database when the Hibernate
         //SessionFactory is created or closed.
-        jpaProperties.put(PROPERTY_NAME_HIBERNATE_HBM2DDL_AUTO, env.getRequiredProperty(PROPERTY_NAME_HIBERNATE_HBM2DDL_AUTO));
+//        jpaProperties.put(PROPERTY_NAME_HIBERNATE_HBM2DDL_AUTO, env.getRequiredProperty(PROPERTY_NAME_HIBERNATE_HBM2DDL_AUTO));
 
         //Configures the naming strategy that is used when Hibernate creates
         //new database objects and schema elements
