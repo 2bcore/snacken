@@ -1,9 +1,10 @@
-package mx.com.tsis.snacken.controller;
+package mx.com.twobcore.snacken.controller;
 
 import static org.junit.Assert.assertNotNull;
 
 import java.math.BigDecimal;
 import java.net.URISyntaxException;
+import java.util.List;
 
 import javax.inject.Inject;
 
@@ -45,10 +46,13 @@ public class TestProductoController {
 
 	@Test
 	public void testActualizarProducto() throws URISyntaxException {
-		Producto p = productoService.consulta(1l);
-		p.setCosto(new BigDecimal("300"));
-		ResponseEntity<Producto> regreso = productoController.actualizar(p);
-		assertNotNull(regreso);
+		List<Producto> productos = productoService.consulta();
+		if(productos != null && !productos.isEmpty()){
+			Producto p = productos.get(0);
+			p.setCosto(p.getCosto().add(BigDecimal.ONE));
+			ResponseEntity<Producto> regreso = productoController.actualizar(p);
+			assertNotNull(regreso);
+		}
 	}
 
 }

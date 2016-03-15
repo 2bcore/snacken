@@ -1,4 +1,4 @@
-package mx.com.tsis.snacken;
+package mx.com.twobcore.snacken;
 
 import java.io.IOException;
 import java.nio.charset.Charset;
