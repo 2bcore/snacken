@@ -43,7 +43,7 @@
 				<activeByDefault>false</activeByDefault>
 			</activation>
 			<properties>
-				<app-name>snacken</app-name>
+				<app-name>snacken-war</app-name>
 				<db-name>snacken</db-name>
 				<db.driver>com.mysql.jdbc.Driver</db.driver>
 				<db.url>jdbc:mysql://192.168.248.130:3306/${db-name}</db.url>
@@ -77,7 +77,7 @@
 				<activeByDefault>false</activeByDefault>
 			</activation>
 			<properties>
-				<app-name>snacken</app-name>
+				<app-name>snacken-war</app-name>
 				<db-name>snacken</db-name>
 				<db.driver>com.mysql.jdbc.Driver</db.driver>
 				<db.url>jdbc:mysql://snacken.c5tdvodan43k.us-west-2.rds.amazonaws.com:3306/${db-name}</db.url>
