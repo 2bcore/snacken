@@ -36,7 +36,7 @@ public class TestProductoController {
 	private ProductoService productoService;
 	
 	
-	// crear peoducto nuevo
+	// crear producto nuevo
 	@Test
 	public void testCrearProducto() throws URISyntaxException {
 		Producto p = new Producto();
