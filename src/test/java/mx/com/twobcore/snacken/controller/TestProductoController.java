@@ -45,6 +45,8 @@ public class TestProductoController {
 		ResponseEntity<Producto> regreso = productoController.crear(p);
 		assertNotNull(regreso);
 	}
+	
+	//actualizar Producto
 
 	@Test
 	public void testActualizarProducto() throws URISyntaxException {
