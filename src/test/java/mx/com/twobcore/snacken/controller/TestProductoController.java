@@ -28,13 +28,18 @@ import mx.com.twobcore.snacken.service.ProductoService;
 	{SnackenConfigurator.class,CORSFilter.class}
 )
 public class TestProductoController {
+	
+	//injeccion del controler
 
 	@Autowired
 	private ProductoController productoController;
 	
+	// servicio
 	@Autowired
 	private ProductoService productoService;
 	
+	
+	// crear peoducto nuevo
 	@Test
 	public void testCrearProducto() throws URISyntaxException {
 		Producto p = new Producto();
