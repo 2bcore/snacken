@@ -6,8 +6,6 @@ import java.math.BigDecimal;
 import java.net.URISyntaxException;
 import java.util.List;
 
-import javax.inject.Inject;
-
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,7 +16,6 @@ import org.springframework.test.context.web.WebAppConfiguration;
 
 import mx.com.twobcore.snacken.config.CORSFilter;
 import mx.com.twobcore.snacken.config.SnackenConfigurator;
-import mx.com.twobcore.snacken.controller.ProductoController;
 import mx.com.twobcore.snacken.model.Producto;
 import mx.com.twobcore.snacken.service.ProductoService;
 
