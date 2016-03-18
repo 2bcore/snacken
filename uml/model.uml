@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_ixta8Ox2EeWMopc19pjXBA" name="Componentes">
+  <packagedElement xmi:type="uml:Component" xmi:id="_BgXdYO03EeWba43yLFpu3Q" name="App mobile">
+    <ownedAttribute xmi:type="uml:Port" xmi:id="_OYABsO04EeWba43yLFpu3Q" name="Solicitud Registro" aggregation="composite" redefinedProperty="_LZd0AO04EeWba43yLFpu3Q" redefinedPort="_LZd0AO04EeWba43yLFpu3Q"/>
+    <ownedAttribute xmi:type="uml:Port" xmi:id="_bZY0YO04EeWba43yLFpu3Q" name="Solicitud autorizacion" aggregation="composite" redefinedProperty="_Z0RQsO04EeWba43yLFpu3Q" redefinedPort="_Z0RQsO04EeWba43yLFpu3Q"/>
+    <ownedAttribute xmi:type="uml:Port" xmi:id="_KvHkkO06EeWba43yLFpu3Q" name="Comanda" aggregation="composite" redefinedProperty="_LcrOIO06EeWba43yLFpu3Q" redefinedPort="_LcrOIO06EeWba43yLFpu3Q"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Component" xmi:id="_Fv5Y4O03EeWba43yLFpu3Q" name="Servidor">
+    <ownedAttribute xmi:type="uml:Port" xmi:id="_LZd0AO04EeWba43yLFpu3Q" name="Registro" type="_444GUO06EeWba43yLFpu3Q" aggregation="composite"/>
+    <ownedAttribute xmi:type="uml:Port" xmi:id="_Z0RQsO04EeWba43yLFpu3Q" name="Autorizador" aggregation="composite"/>
+    <ownedAttribute xmi:type="uml:Port" xmi:id="_LcrOIO06EeWba43yLFpu3Q" name="Snacken Server" aggregation="composite"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Interaction" xmi:id="_d5Xy8O06EeWba43yLFpu3Q" name="Solicitud de Registro">
+    <ownedAttribute xmi:id="_hsBlMO06EeWba43yLFpu3Q" name="App mobile" type="_BgXdYO03EeWba43yLFpu3Q"/>
+    <ownedAttribute xmi:id="_jnfMUO06EeWba43yLFpu3Q" name="Servidor" type="_Fv5Y4O03EeWba43yLFpu3Q"/>
+    <ownedAttribute xmi:id="_eIdiYO07EeWba43yLFpu3Q" name="Class2" type="_eIL1kO07EeWba43yLFpu3Q"/>
+    <lifeline xmi:id="_hsCMQO06EeWba43yLFpu3Q" name="App mobile" represents="_hsBlMO06EeWba43yLFpu3Q"/>
+    <lifeline xmi:id="_jnfMUe06EeWba43yLFpu3Q" name="Servidor " represents="_jnfMUO06EeWba43yLFpu3Q">
+      <eAnnotations xmi:id="_WBDWYO07EeWba43yLFpu3Q"/>
+    </lifeline>
+    <lifeline xmi:id="_eIL1ke07EeWba43yLFpu3Q" name="Class2" represents="_eIdiYO07EeWba43yLFpu3Q"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_444GUO06EeWba43yLFpu3Q" name="UsuarioService">
+    <ownedOperation xmi:id="_MJCvcO07EeWba43yLFpu3Q" name="registrar"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_eIL1kO07EeWba43yLFpu3Q" name="Class2"/>
+</uml:Model>
