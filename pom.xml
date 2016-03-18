@@ -46,12 +46,13 @@
 				<app-name>snacken-war</app-name>
 				<db-name>snacken</db-name>
 				<db.driver>com.mysql.jdbc.Driver</db.driver>
-				<db.url>jdbc:mysql://192.168.248.130:3306/${db-name}</db.url>
+				<db.url>jdbc:mysql://192.168.1.130:3306/${db-name}</db.url>
 				<db.username>snacken</db.username>
 				<db.password>snacken2016</db.password>
 				<hibernate.dialect>org.hibernate.dialect.MySQLDialect</hibernate.dialect>
-				<rest-host-name>192.168.248.130</rest-host-name>
-				<rest-host-port>8080</rest-host-port>
+				<rest-host-name>192.168.1.130</rest-host-name>
+				<rest-host-port>8443</rest-host-port>
+				<protocolo>https</protocolo>
 			</properties>
 		</profile>
 		<profile>
@@ -68,7 +69,8 @@
 				<db.password>snacken2016</db.password>
 				<hibernate.dialect>org.hibernate.dialect.MySQLDialect</hibernate.dialect>
 				<rest-host-name>localhost</rest-host-name>
-				<rest-host-port>8080</rest-host-port>
+				<rest-host-port>8443</rest-host-port>
+				<protocolo>https</protocolo>
 			</properties>
 		</profile>
 		<profile>
@@ -85,7 +87,8 @@
 				<db.password>snacken2016</db.password>
 				<hibernate.dialect>org.hibernate.dialect.MySQLDialect</hibernate.dialect>
 				<rest-host-name>ec2-54-187-28-176.us-west-2.compute.amazonaws.com</rest-host-name>
-				<rest-host-port>8080</rest-host-port>
+				<rest-host-port>8443</rest-host-port>
+				<protocolo>https</protocolo>
 			</properties>
 		</profile>
 	</profiles>
